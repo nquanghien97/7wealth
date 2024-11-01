@@ -17,11 +17,23 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+/* não */
+.fb0 {
+  fill: #F4837B;
+}
+.fb1 {
+  fill: #FEBA94
+}
+.fb2 {
+  fill: #E56B69
+}
+
+/* tuyến giáp */
+.thy0 {
+  fill: #F4837B;
+}
+.thy1 {
+  fill: #FEBA94;
 }
