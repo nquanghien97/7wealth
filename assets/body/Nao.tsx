@@ -1,5 +1,3 @@
-
-
 export default function Nao(props: React.SVGProps<SVGSVGElement>) {
   const { ...rest } = props;
   return (

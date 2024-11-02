@@ -1,13 +1,17 @@
 
-import React from 'react'
+import { SVGProps } from 'react'
 
-function TeBaoLympho(props: React.SVGProps<SVGSVGElement>) {
+function TeBaoLympho(props: SVGProps<SVGSVGElement>) {
   const { ...rest } = props
   return (
-    <svg {...rest} version="1.1" xmlns="" x="0px" y="0px" viewBox="0 0 12.07 10.16" >
+    <svg {...rest} version="1.1" xmlns="" x="0px" y="0px" width="12.47px" height="13.44px" viewBox="0 0 12.47 13.44">
       <defs>
       </defs>
-      <path data-bs-toggle="modal" data-bs-target="#lymphomaModal" id="lymphomaOutline"
+      <path
+        data-bs-toggle="modal"
+        data-bs-target="#lymphomaModal"
+        id="lymphomaOutline"
+        className="lympe1 zoom"
         d="M11.29,9.15c-0.46,0-0.84,0.29-1,0.7C9.86,9.82,9.43,9.81,9.01,9.81c1.58-2.14,2.3-5.96,2.5-7.51
           c0.02,0,0.04,0,0.05-0.01c0.58-0.14,1-0.7,0.89-1.3c-0.07-0.38-0.26-0.59-0.4-0.69c-0.16-0.14-0.36-0.24-0.58-0.27
           c-0.16-0.04-0.5-0.03-0.74,0.12c-0.42,0.23-0.68,0.7-0.61,1.2c0.06,0.41,0.34,0.72,0.69,0.87c0.03,0.02,0.07,0.02,0.11,0.03
@@ -17,7 +21,7 @@ function TeBaoLympho(props: React.SVGProps<SVGSVGElement>) {
           c-0.16-0.04-0.5-0.03-0.74,0.12c-0.42,0.23-0.68,0.7-0.61,1.2c0.06,0.41,0.34,0.72,0.69,0.87c0.21,0.12,0.53,0.16,0.75,0.07
           c0.58-0.14,1-0.7,0.89-1.3c-0.01-0.06-0.03-0.1-0.04-0.15c1.18-0.65,3.41-1.42,6.17-1.52l0.02,0.02c0.01-0.01,0.01-0.01,0.02-0.02
           c0.57-0.02,1.16-0.01,1.77,0.04c0.11,0.48,0.51,0.84,1.02,0.84c0.59,0,1.07-0.48,1.07-1.07C12.36,9.63,11.88,9.15,11.29,9.15z"
-      />
+        />
     </svg>
   )
 }
