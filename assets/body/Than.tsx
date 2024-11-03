@@ -1,8 +1,15 @@
 'use client';
+import { bodyPartType } from "@/config/ListBodyData";
+import { bodyPartMaleType } from "@/config/ListBodyMaleData";
 import { useState } from "react";
 
-export default function Than(props: React.SVGProps<SVGSVGElement>) {
-  const { ...rest } = props;
+interface ThanProps extends React.SVGProps<SVGSVGElement> {
+  bodyPart: bodyPartType | bodyPartMaleType | null
+}
+
+
+export default function Than(props: ThanProps) {
+  const { bodyPart, ...rest } = props;
   const [hover, setHover] = useState(false)
   return (
     <svg { ...rest } version="1.1" xmlns="" x="0px" y="0px" viewBox="0 0 37.81 20.2" className="w-full h-full overflow-visible-custom">
@@ -10,10 +17,9 @@ export default function Than(props: React.SVGProps<SVGSVGElement>) {
       </defs>
       <g className="">
         <g
-          className={`${hover ? 'scale-custom' : ''} duration-300 cursor-pointer`}
+          className={`${hover || bodyPart === 'thận' ? 'scale-custom' : ''} duration-300 cursor-pointer`}
           onMouseEnter={() => {
             setHover(true)
-            console.log('aa')
           }}
           onMouseLeave={() => setHover(false)}
         >
@@ -90,7 +96,7 @@ export default function Than(props: React.SVGProps<SVGSVGElement>) {
           </g>
         </g>
         <g
-          className={`${hover ? 'scale-custom' : ''} duration-300 cursor-pointer`}
+          className={`${hover || bodyPart === 'thận' ? 'scale-custom' : ''} duration-300 cursor-pointer`}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >

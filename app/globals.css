@@ -24,9 +24,11 @@ html {
 .fb0 {
   fill: #F4837B;
 }
+
 .fb1 {
   fill: #FEBA94
 }
+
 .fb2 {
   fill: #E56B69
 }
@@ -35,6 +37,7 @@ html {
 .thy0 {
   fill: #F4837B;
 }
+
 .thy1 {
   fill: #FEBA94;
 }
@@ -52,12 +55,15 @@ html {
 .lung1 {
   fill: #E89E7D;
 }
+
 .lung2 {
   fill: #DD8F6F
 }
+
 .lung3 {
   fill: #FEBA94;
 }
+
 .lung4 {
   fill: #D68768;
 }
@@ -71,28 +77,36 @@ html {
 .bowel0 {
   fill: #F2B9B4;
 }
+
 .bowel1 {
   fill: #CE8888;
 }
+
 .bowel2 {
   opacity: .55;
   fill: #D49CA7;
 }
+
 .bowel3 {
   fill: #DD8F6F;
 }
+
 .bowel4 {
   fill: #E89E7D;
 }
+
 .bowel5 {
   fill: #F4AB87;
 }
+
 .bowel6 {
   fill: #FEBA94;
 }
+
 .bowel7 {
   fill: #D68768;
 }
+
 .bowel8 {
   fill: #C9775B;
 }
@@ -101,9 +115,11 @@ html {
 .br0 {
   fill: #F7C1B2;
 }
+
 .br1 {
   fill: #F79581;
 }
+
 .br2 {
   fill: #D6734C;
 }
@@ -112,12 +128,15 @@ html {
 .pan0 {
   fill: #FCD286
 }
+
 .pan1 {
   fill: #F9BF64;
 }
+
 .pan2 {
   fill: #EAAB57;
 }
+
 .pan3 {
   fill: #F7E2B2;
 }
@@ -126,6 +145,7 @@ html {
 .oes0 {
   fill: #F4AB87;
 }
+
 .oes1 {
   fill: #FEBA94;
 }
@@ -134,15 +154,19 @@ html {
 .liver1 {
   fill: #CE574E;
 }
+
 .liver2 {
   fill: #D66253
 }
+
 .liver3 {
   fill: #BC4B59;
 }
+
 .liver4 {
   fill: #FEBA94;
 }
+
 .liver5 {
   fill: #F4AB87;
 }
@@ -156,27 +180,35 @@ html {
 .kid0 {
   fill: #FEBA94;
 }
+
 .kid1 {
   fill: #F4AB87;
 }
+
 .kid2 {
   fill: #D6485D;
 }
+
 .kid3 {
   fill: #CC3B57;
 }
+
 .kid4 {
   fill: #4B7BD1;
 }
+
 .kid5 {
   fill: #628BE5;
 }
+
 .kid6 {
   fill: #A05251;
 }
+
 .kid7 {
   fill: #964944;
 }
+
 .kid8 {
   fill: #893F3C;
 }
@@ -185,9 +217,11 @@ html {
 .ovary0 {
   fill: #FEBA94;
 }
+
 .ovary1 {
   fill: #F2B9B4;
 }
+
 .ovary2 {
   fill: #D66253;
 }
@@ -196,9 +230,11 @@ html {
 .endo0 {
   fill: #F2B9B4;
 }
+
 .endo1 {
   fill: #D66253;
 }
+
 .endo2 {
   fill: #A05251;
 }
@@ -207,17 +243,93 @@ html {
 .trach0 {
   fill: #FFCDB8;
 }
+
 .trach1 {
   fill: #F2B8A4;
 }
+
 .trach2 {
   fill: #FFD7C9;
 }
+
 .trach3 {
   fill: #E5A38F;
 }
+
 .trach4 {
   fill: #D38A79;
+}
+
+/* ngực nam */
+.mbr1 {
+  fill: #F7C1B2;
+}
+
+.mbr2 {
+  fill: #F79581;
+}
+
+.mbr3 {
+  fill: #D6734C;
+}
+
+/* tuyến tiền liệt */
+.pros0 {
+  fill: #D2999C;
+}
+
+/* penis */
+.penis0 {
+  fill: #F4AB87;
+}
+
+.pen1 {
+  fill: #D59C9F;
+}
+
+.pen2 {
+  fill: #D66253;
+}
+
+.pen3 {
+  fill: #F9BAA4;
+}
+
+/* tinh hoàn */
+.testicular0 {
+  fill: #D66253;
+}
+
+.testicular1 {
+  fill: #FFB0C3;
+}
+
+/* tuyến tiền liệt icon */
+.pro0 {
+  fill: #4F4F4F;
+  stroke: #000;
+  stroke-width: .9989;
+  stroke-miterlimit: 10;
+  transition: 0.25s;
+}
+
+.pro1 {
+  fill: #FFF;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+/* tinh hoàn icon */
+.test0 {
+  fill: #FFF;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+.test1 {
+  fill: #4F4F4F;
+  stroke: #000;
+  stroke-width: .9989;
+  stroke-miterlimit: 10;
 }
 
 /*  */
@@ -225,6 +337,7 @@ html {
   fill: #FFF;
   transition: 0.25s;
 }
+
 circle {
   fill: #235932;
 }
@@ -237,10 +350,11 @@ circle {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 .l-fill-2 {
   stroke: #FFF;
-    stroke-width: 3;
-    stroke-miterlimit: 10;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
 }
 
 .n1 {
@@ -260,6 +374,7 @@ circle {
 .bi0 {
   fill: #FFF;
 }
+
 .bi1 {
   fill-rule: evenodd;
   clip-rule: evenodd;
@@ -284,6 +399,7 @@ circle {
   stroke: #000;
   stroke-miterlimit: 10;
 }
+
 .ov2 {
   fill: #FFF;
 }
@@ -291,6 +407,7 @@ circle {
 .end0 {
   fill: #FFF;
 }
+
 .end1 {
   fill: #4F4F4F;
   stroke: #000;

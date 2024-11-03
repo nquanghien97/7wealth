@@ -1,10 +1,17 @@
-export default function TuyenTuy(props: React.SVGProps<SVGSVGElement>) {
-  const { ...rest } = props;
+import { bodyPartType } from "@/config/ListBodyData";
+import { bodyPartMaleType } from "@/config/ListBodyMaleData";
+
+interface TuyenTuyProps extends React.SVGProps<SVGSVGElement> {
+  bodyPart: bodyPartMaleType | bodyPartType | null
+}
+
+export default function TuyenTuy(props: TuyenTuyProps) {
+  const { bodyPart, ...rest } = props;
   return (
-    <svg { ...rest } version="1.1" xmlns="" x="0px" y="0px" viewBox="0 0 21.33 13.31">
+    <svg {...rest} version="1.1" xmlns="" x="0px" y="0px" viewBox="0 0 21.33 13.31">
       <defs>
       </defs>
-      <g data-bs-toggle="modal" data-bs-target="#pancreasModal" className="hover:scale-110 duration-300 cursor-pointer" id="pancreasOutline">
+      <g data-bs-toggle="modal" data-bs-target="#pancreasModal" className={`hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'tuyến tụy' && 'scale-110'}`} id="pancreasOutline">
         <g>
           <path className="pan0" d="M20.59,0.06c-0.28-0.04-0.52-0.08-0.75-0.05c-0.14,0.02-0.27,0.07-0.4,0.17c-0.23,0.17-0.25,0.3-0.52,0.22
                 c-0.18-0.05-0.36-0.08-0.55-0.03c-0.1,0.02-0.16,0.07-0.26,0.1c-0.24,0.08-0.47,0.09-0.72,0.08c-0.23-0.02-0.44-0.02-0.66,0.06

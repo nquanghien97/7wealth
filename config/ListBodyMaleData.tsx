@@ -1,22 +1,22 @@
 import BachCauIcon from "@/assets/body/icons/Bach-cau";
-import BuongTrungIcon from "@/assets/body/icons/BuongTrung";
 import DauVaCoIcon from "@/assets/body/icons/DauVaCo";
 import DuongRuotIcon from "@/assets/body/icons/DuongRuot";
 import GanIcon from "@/assets/body/icons/Gan";
 import HacToDaIcon from "@/assets/body/icons/HacToDa";
 import NaoIcon from "@/assets/body/icons/Nao";
-import NgucIcon from "@/assets/body/icons/Nguc";
-import NoiMacTuCungIcon from "@/assets/body/icons/NoiMacTuCung";
+import NgucMaleIcon from "@/assets/body/icons/NgucMaleIcon";
 import PhoiIcon from "@/assets/body/icons/Phoi";
 import TeBaoLymphoIcon from "@/assets/body/icons/Te-bao-lympho";
 import ThanIcon from "@/assets/body/icons/Than";
 import ThucQuanIcon from "@/assets/body/icons/ThucQuan";
+import TinhHoanIcon from "@/assets/body/icons/TinhHoanIcon";
 import TuyenGiapIcon from "@/assets/body/icons/Tuyen-giap";
+import TuyenTienLietIcon from "@/assets/body/icons/TuyenTienLietIcon";
 import TuyenTuyIcon from "@/assets/body/icons/TuyenTuy";
 
-export type bodyPartType = 'não' | 'bạch cầu' | 'đầu và cổ' | 'đường ruột' | 'ngực' | 'tuyến tụy' | 'tuyến giáp' | 'thực quản' | 'phổi' | 'gan' | 'hắc tố da' | 'thận' | 'tế bào lympho' | 'buồng trứng' | 'nội mạc tử cung'
+export type bodyPartMaleType = 'não' | 'bạch cầu' | 'đầu và cổ' | 'đường ruột' | 'ngực' | 'tuyến tụy' | 'tuyến giáp' | 'thực quản' | 'phổi' | 'gan' | 'hắc tố da' | 'thận' | 'tế bào lympho' | 'tuyến tiền liệt' | 'tinh hoàn'
 
-export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Element, description: string[]; infomation: { name: string; link: string } }> = {
+export const ListBodyData: Record<bodyPartMaleType, { title: string; image: JSX.Element, description: string[]; infomation: { name: string; link: string } }> = {
   "não": {
     title: 'Não',
     image: <NaoIcon width={70} height={70} />,
@@ -77,7 +77,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
   },
   "ngực": {
     title: 'Ngực',
-    image: <NgucIcon width={70} height={70} />,
+    image: <NgucMaleIcon width={70} height={70} />,
     description: [
       'unexplained pain in the mouth, upper teeth, throat, neck, face, ear or chin',
       'a lump or sore that does not go away',
@@ -210,39 +210,36 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       link: '/'
     }
   },
-  "buồng trứng": {
-    title: 'Buồng trứng',
-    image: <BuongTrungIcon width={70} height={70} />,
+  "tuyến tiền liệt": {
+    title: 'Tuyến tiền liệt',
+    image: <TuyenTienLietIcon width={70} height={70} />,
     description: [
-      'unexplained pain in the mouth, upper teeth, throat, neck, face, ear or chin',
-      'a lump or sore that does not go away',
-      'difficulty or pain when swallowing or chewing',
-      'coughing up blood, or a cough that doesn’t go away',
-      'bleeding in the mouth or through the nose'
+      'a change in bladder habit, including pain when urinating, weak flow or blood in urine',
+      'persistent unexplained pain in the back, hips, pelvis or chest',
+      'unexplained tiredness'
     ],
     infomation: {
-      name: 'leukaemia.canceraustralia.gov.au',
+      name: 'prostate-cancer.canceraustralia.gov.au',
       link: '/'
     }
   },
-  "nội mạc tử cung": {
-    title: 'Nội mạc tử cung',
-    image: <NoiMacTuCungIcon width={70} height={70} />,
+  "tinh hoàn": {
+    title: 'Tinh hoàn',
+    image: <TinhHoanIcon width={70} height={70} />,
     description: [
-      'unexplained pain in the mouth, upper teeth, throat, neck, face, ear or chin',
-      'a lump or sore that does not go away',
-      'difficulty or pain when swallowing or chewing',
-      'coughing up blood, or a cough that doesn’t go away',
-      'bleeding in the mouth or through the nose'
+      'a painless lump or swelling in either testicle',
+      'a change in how the testicle feels',
+      'persistent unexplained pain in the lower abdomen or groin',
+      'pain or discomfort in a testicle or in the scrotum.',
     ],
     infomation: {
-      name: 'leukaemia.canceraustralia.gov.au',
+      name: 'testicular-cancer.canceraustralia.gov.au',
       link: '/'
     }
   },
 }
 
-export const ListBodyIcon: {title: bodyPartType, icon: JSX.Element}[] = [
+export const ListBodyIcon: {title: bodyPartMaleType, icon: JSX.Element}[] = [
   {
     title: 'não',
     icon: <NaoIcon width={50} height={50} />
@@ -261,7 +258,7 @@ export const ListBodyIcon: {title: bodyPartType, icon: JSX.Element}[] = [
   },
   {
     title: 'ngực',
-    icon: <NgucIcon width={50} height={50} />
+    icon: <NgucMaleIcon width={50} height={50} />
   },
   {
     title: 'tuyến tụy',
@@ -296,11 +293,11 @@ export const ListBodyIcon: {title: bodyPartType, icon: JSX.Element}[] = [
     icon: <TeBaoLymphoIcon width={50} height={50} />
   },
   {
-    title: 'buồng trứng',
-    icon: <BuongTrungIcon width={50} height={50} />
+    title: 'tuyến tiền liệt',
+    icon: <TuyenTienLietIcon width={50} height={50} />
   },
   {
-    title: 'nội mạc tử cung',
-    icon: <NoiMacTuCungIcon width={50} height={50} />
+    title: 'tinh hoàn',
+    icon: <TinhHoanIcon width={50} height={50} />
   }
 ]
