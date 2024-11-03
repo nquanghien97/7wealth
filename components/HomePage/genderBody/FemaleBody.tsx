@@ -60,7 +60,7 @@ function FemaleBody() {
           >
             <Nao width={112} height={94} className={`w-[25%] h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'não' ? 'scale-110' : ''}`} />
           </div>
-          <div className={`top-2 left-[56%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'não' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Não</div>
+          <div className={`top-2 left-[56%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rou hidden lg:block nded-[5px] ${bodyPart === 'não' ? 'lg:opacity-100' : 'opacity-0'}`}>Não</div>
           {/* Tuyến giáp */}
           <div
             className="absolute z-10 top-[23%] left-[48%] w-[4%]"
@@ -73,7 +73,7 @@ function FemaleBody() {
           >
             <TuyenGiap width={45} height={38} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'tuyến giáp' ? 'scale-110' : ''}`} />
           </div>
-          <div className={`top-[22%] left-[53%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'tuyến giáp' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Tuyến giáp</div>
+          <div className={`top-[22%] left-[53%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5 hidden lg:block px] ${bodyPart === 'tuyến giáp' ? 'lg:opacity-100' : 'opacity-0'}`}>Tuyến giáp</div>
           {/* Tế bào lympho */}
           <div
             className="absolute z-10 w-[5%] top-[calc(21%)] left-[calc(43%)]"
@@ -86,7 +86,7 @@ function FemaleBody() {
           >
             <TeBaoLympho width={50} height={68} fill="#33A856" className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'tế bào lympho' && 'scale-110'}`} />
           </div>
-          <div className={`top-[22%] left-[24%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'tế bào lympho' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Tế bào lympho</div>
+          <div className={`top-[22%] left-[24%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] hidden lg:block  ${bodyPart === 'tế bào lympho' ? 'lg:opacity-100' : 'opacity-0'}`}>Tế bào lympho</div>
           {/* Bạch cầu */}
           <div
             className="absolute z-10 w-[2%] top-[40%] left-[37%]"
@@ -99,7 +99,7 @@ function FemaleBody() {
           >
             <BachCau width={16} height={16} fill="#33A856" className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'bạch cầu' && 'scale-110'}`} />
           </div>
-          <div className={`top-[41%] left-[16%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'bạch cầu' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Bạch cầu</div>
+          <div className={`top-[41%] left-[16%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded- hidden lg:block [5px] ${bodyPart === 'bạch cầu' ? 'lg:opacity-100' : 'opacity-0'}`}>Bạch cầu</div>
           <div
             className="absolute z-10 w-[2%] top-[43%] left-[36%]"
             onMouseEnter={() => setBodyPart('bạch cầu')}
@@ -145,7 +145,7 @@ function FemaleBody() {
           >
             <Phoi width={84} height={156} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'phổi' && 'scale-110'}`} />
           </div>
-          <div className={`top-[36%] left-[21%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'phổi' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Phổi</div>
+          <div className={`top-[36%] left-[21%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:roun hidden lg:block ded-[5px] ${bodyPart === 'phổi' ? 'lg:opacity-100' : 'opacity-0'}`}>Phổi</div>
           {/* Đầu và cổ */}
           <div
             className="absolute z-10 w-[6%] top-[19%] left-[47%]"
@@ -158,7 +158,7 @@ function FemaleBody() {
           >
             <DauVaCo width={60} height={20} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'đầu và cổ' && 'scale-110'}`} />
           </div>
-          <div className={`top-[17%] left-[53%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'đầu và cổ' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Đầu và cổ</div>
+          <div className={`top-[17%] left-[53%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[ hidden lg:block 5px] ${bodyPart === 'đầu và cổ' ? 'lg:opacity-100' : 'opacity-0'}`}>Đầu và cổ</div>
           {/* Đường ruột */}
           <div
             className="absolute z-10 w-[15%] top-[64%] left-[42%]"
@@ -171,7 +171,7 @@ function FemaleBody() {
           >
             <DuongRuot width={168} height={192} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'đường ruột' && 'scale-110'}`} />
           </div>
-          <div className={`top-[70%] left-[58%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'đường ruột' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Đường ruột</div>
+          <div className={`top-[70%] left-[58%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5 hidden lg:block px] ${bodyPart === 'đường ruột' ? 'lg:opacity-100' : 'opacity-0'}`}>Đường ruột</div>
           {/* Ngực */}
           <div
             className="absolute z-10 w-[11%] top-[36%] left-[50%]"
@@ -184,7 +184,7 @@ function FemaleBody() {
           >
             <Nguc width={168} height={192} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'ngực' && 'scale-110'}`} />
           </div>
-          <div className={`top-[40%] left-[62%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'ngực' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Ngực</div>
+          <div className={`top-[40%] left-[62%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:roun hidden lg:block ded-[5px] ${bodyPart === 'ngực' ? 'lg:opacity-100' : 'opacity-0'}`}>Ngực</div>
           {/* Tuyến tụy */}
           <div
             className="absolute z-20 w-[8%] top-[55%] left-[46%]"
@@ -197,7 +197,7 @@ function FemaleBody() {
           >
             <TuyenTuy bodyPart={bodyPart} width={168} height={192} className="w-full h-full overflow-visible" />
           </div>
-          <div className={`top-[56%] left-[54%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'tuyến tụy' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Tuyến tụy</div>
+          <div className={`top-[56%] left-[54%] w-[200px] text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[ hidden lg:block 5px] ${bodyPart === 'tuyến tụy' ? 'lg:opacity-100' : 'opacity-0'}`}>Tuyến tụy</div>
           {/* Thực quản */}
           <div
             className="absolute w-[9%] top-[35%] left-[calc(45%+2px)] z-1"
@@ -210,7 +210,7 @@ function FemaleBody() {
           >
             <ThucQuan width={94} height={219} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'thực quản' && 'scale-110'}`} />
           </div>
-          <div className={`top-[36%] left-[50%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'thực quản' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Thực quản</div>
+          <div className={`top-[36%] left-[50%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[ hidden lg:block 5px] ${bodyPart === 'thực quản' ? 'lg:opacity-100' : 'opacity-0'}`}>Thực quản</div>
           {/* Gan */}
           <div
             className="absolute w-[12%] top-[50%] left-[41%] z-10"
@@ -223,7 +223,7 @@ function FemaleBody() {
           >
             <Gan width={130} height={100} className={`w-full h-full hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'gan' && 'scale-110'}`} />
           </div>
-          <div className={`top-[52%] left-[20%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'gan' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Gan</div>
+          <div className={`top-[52%] left-[20%] w-[200px] text-start duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:right-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rou hidden lg:block nded-[5px] ${bodyPart === 'gan' ? 'lg:opacity-100' : 'opacity-0'}`}>Gan</div>
           {/* Hắc tố da */}
           <div
             className={`absolute w-[2%] top-[34%] right-[36%] z-10 hover:scale-125 duration-300 cursor-pointer ${bodyPart === 'hắc tố da' && 'scale-110'}`}
@@ -236,7 +236,7 @@ function FemaleBody() {
           >
             <HacToDa width={24} height={24} className="w-full h-full" />
           </div>
-          <div className={`top-[32%] left-[65%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'hắc tố da' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Hắc tố da</div>
+          <div className={`top-[32%] left-[65%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[ hidden lg:block 5px] ${bodyPart === 'hắc tố da' ? 'lg:opacity-100' : 'opacity-0'}`}>Hắc tố da</div>
           {/* Thận */}
           <div
             className="absolute w-[12%] top-[60%] left-[43%] z-20"
@@ -249,7 +249,7 @@ function FemaleBody() {
           >
             <Than bodyPart={bodyPart} width={142} height={76} />
           </div>
-          <div className={`top-[60%] left-[56%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'thận' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Thận</div>
+          <div className={`top-[60%] left-[56%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:roun hidden lg:block ded-[5px] ${bodyPart === 'thận' ? 'lg:opacity-100' : 'opacity-0'}`}>Thận</div>
           {/* Buồng trứng */}
           <div
             className={`absolute w-[16%] top-[76%] left-[42%] z-30 hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'buồng trứng' && 'scale-110'}`}
@@ -262,7 +262,7 @@ function FemaleBody() {
           >
             <BuongTrung width={180} height={40} className="w-full h-full" />
           </div>
-          <div className={`top-[74%] left-[59%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'buồng trứng' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Buồng trứng</div>
+          <div className={`top-[74%] left-[59%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5p hidden lg:block x] ${bodyPart === 'buồng trứng' ? 'lg:opacity-100' : 'opacity-0'}`}>Buồng trứng</div>
           {/* Nội mạc tử cung */}
           <div
             className={`absolute w-[6%] top-[76%] left-[47%] z-20 hover:scale-110 duration-300 cursor-pointer ${bodyPart === 'nội mạc tử cung' && 'scale-110'}`}
@@ -275,7 +275,7 @@ function FemaleBody() {
           >
             <NoiMacTuCung width={72} height={96} className="w-full h-full" />
           </div>
-          <div className={`top-[80%] left-[52%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] ${bodyPart === 'nội mạc tử cung' ? 'opacity-0 lg:opacity-100' : 'opacity-0'}`}>Nội mạc tử cung</div>
+          <div className={`top-[80%] left-[52%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] $ hidden lg:block {bodyPart === 'nội mạc tử cung' ? 'lg:opacity-100' : 'opacity-0'}`}>Nội mạc tử cung</div>
           <div className="absolute w-[3%] top-[27%] left-[calc(48%+5px)] z-1 hover:scale-110 duration-300 cursor-pointer">
             <Image1 width={30} height={94} className="w-full h-full" />
           </div>

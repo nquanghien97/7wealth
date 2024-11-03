@@ -8,8 +8,8 @@ function BodySection() {
   
   const [gender, setGender] = useState<'nữ' | 'nam'>('nữ')
   return (
-    <section>
-      <div className="max-w-6xl m-auto">
+    <section className="mb-8">
+      <div className="max-w-screen-xl m-auto">
         <div className="flex justify-center items-center flex-col mb-4">
           <div className="mb-4">
             <h1 className="text-[#235932] text-3xl font-bold uppercase">Hành trình khám phá cơ thể</h1>

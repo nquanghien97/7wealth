@@ -20,7 +20,7 @@ function Header() {
           <p className="text-center text-white text-sm">Giao hàng miễn phí toàn quốc với hóa đơn từ 99.000 đơn</p>
         </div>
         <div className="h-[64px] shadow-sm shadow-black/20">
-          <div className="h-full flex justify-between max-w-6xl m-auto">
+          <div className="h-full flex justify-between max-w-screen-xl m-auto">
             <Link href="/" className="flex md:justify-center items-center max-md:w-full">
               <Image src="/logo_7w_vuong.png" alt="logo" width={58} height={58} className="m-auto" />
             </Link>
@@ -73,7 +73,7 @@ function Header() {
                 )}
               </ul>
             </div>
-            <div>
+            <div className="max-md:hidden">
               <div className='h-full flex items-center'>
                 <div className="cursor-pointer">
                   <SearchIcon fill='#f18017' width={24} height={24} />
