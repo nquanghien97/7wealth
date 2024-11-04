@@ -16,7 +16,7 @@ import TuyenTuyIcon from "@/assets/body/icons/TuyenTuy";
 
 export type bodyPartType = 'não' | 'bạch cầu' | 'đầu và cổ' | 'đường ruột' | 'ngực' | 'tuyến tụy' | 'tuyến giáp' | 'thực quản' | 'phổi' | 'gan' | 'hắc tố da' | 'thận' | 'tế bào lympho' | 'buồng trứng' | 'nội mạc tử cung'
 
-export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Element, description: string[]; infomation: { name: string; link: string } }> = {
+export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Element, description: string[]; information: { name: string; link: string } }> = {
   "não": {
     title: 'Não',
     image: <NaoIcon width={70} height={70} />,
@@ -26,7 +26,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'seizures',
       'disturbed vision or speech'
     ],
-    infomation: {
+    information: {
       name: 'brain-cancer.canceraustralia.gov.au',
       link: '/'
     }
@@ -40,7 +40,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'pain in the bones or joints',
       'enlarged lymph nodes'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -55,7 +55,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -70,7 +70,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -85,7 +85,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -100,7 +100,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -115,7 +115,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -130,7 +130,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -145,7 +145,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -160,7 +160,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -175,7 +175,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -190,7 +190,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -205,7 +205,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -220,7 +220,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }
@@ -235,7 +235,7 @@ export const ListBodyData: Record<bodyPartType, { title: string; image: JSX.Elem
       'coughing up blood, or a cough that doesn’t go away',
       'bleeding in the mouth or through the nose'
     ],
-    infomation: {
+    information: {
       name: 'leukaemia.canceraustralia.gov.au',
       link: '/'
     }

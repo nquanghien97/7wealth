@@ -422,3 +422,7 @@ circle {
 .overflow-visible-custom {
   overflow: visible;
 }
+
+.flex_0_0_auto {
+  flex: 0 0 auto;
+}

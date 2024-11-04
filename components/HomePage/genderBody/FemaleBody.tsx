@@ -301,7 +301,7 @@ function FemaleBody() {
             <div className="mb-4">
               <p>
                 For more information go to
-                <Link href={ListBodyData[bodyPartClick].infomation.link} className="ml-2 text-[#B32026] underline">{ListBodyData[bodyPartClick].infomation.name}</Link>
+                <Link href={ListBodyData[bodyPartClick].information.link} className="ml-2 text-[#B32026] underline">{ListBodyData[bodyPartClick].information.name}</Link>
               </p>
             </div>
             <div className="flex justify-end">

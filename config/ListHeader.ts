@@ -9,12 +9,12 @@ export const ListHeader: ListHeaderType[] = [
   {
     id: 1,
     title: 'Về chúng tôi',
-    path: '/'
+    path: '/ve-chung-toi'
   },
   {
     id: 2,
     title: 'Sản phẩm',
-    path: '#',
+    path: '/san-pham',
     children: [
       {
         id: 21,
@@ -72,7 +72,7 @@ export const ListHeader: ListHeaderType[] = [
   {
     id: 3,
     title: 'Hiểu biết về sức khỏe',
-    path: '/san-pham',
+    path: '/kien-thuc',
     children: [
       {
         id: 31,
@@ -145,7 +145,7 @@ export const ListHeader: ListHeaderType[] = [
       {
         id: 41,
         title: 'Hoạt động xã hội',
-        path: '#',
+        path: 'tin-tuc-xa-hoi',
         children: [
           {
             id: 411,
@@ -191,7 +191,7 @@ export const ListHeader: ListHeaderType[] = [
   {
     id: 5,
     title: 'Cơ hội kinh doanh',
-    path: '/du-doan-chieu-cao',
+    path: '/co-hoi-kinh-doanh',
     children: [
       {
         id: 51,
