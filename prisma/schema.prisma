@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+  News     News[]
+}
+
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String   @db.LongText
+  slug      String   @unique
+  imageUrl  String
+  authorId  Int
+  author    User     @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Product {
+  id            Int            @id @default(autoincrement())
+  name          String
+  images        ProductImage[]
+  price         Int
+  discountPrice Int?
+  quantity      Int
+  type          TypeProduct
+  description   String         @db.LongText
+  details       String         @db.LongText
+  slug          String         @unique
+  createdAt     DateTime       @default(now())
+}
+
+model Order {
+  id          Int      @id @default(autoincrement())
+  fullName    String
+  phoneNumber String
+  productName String
+  quantity    Int
+  province    String
+  district    String
+  ward        String
+  address     String
+  createdAt   DateTime @default(now())
+}
+
+enum TypeProduct {
+  VitaminKhoangChat
+  DieuTriBenhLy
+  ChamSocCaNhan
+}
+
+model ProductImage {
+  id        Int     @id @default(autoincrement())
+  imageUrl  String  @db.LongText
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+}
+
+enum Job_type {
+  Full_time
+  Part_time
+  Intern
+  Contract
+  Freelancer
+}
+
+model Job {
+  id                    Int      @id @default(autoincrement())
+  job_name              String
+  location              String
+  time_open             String
+  time_close            String
+  job_type              Job_type
+  salary                String
+  job_description       String   @db.LongText
+  number_of_recruitment Int
+  created_at            DateTime @default(now())
+}
+
+model Candidate_information {
+  id                  Int      @id @default(autoincrement())
+  job_id              Int
+  full_name           String
+  email               String
+  phone_number        String
+  date_of_birth       String
+  content             String
+  image               String
+  education           String
+  current_address     String
+  years_of_experience Int
+  salary_expect       String
+  availability_time   String
+  resume              String
+  created_at          DateTime @default(now())
+}
