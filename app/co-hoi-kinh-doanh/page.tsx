@@ -5,13 +5,18 @@ import { JobEntity } from '@/entities/job.entity';
 import LocationIcon from '@/assets/icons/LocationIcon';
 import ClockIcon from '@/assets/icons/ClockIcon';
 import { redirect } from 'next/navigation';
+import Link from 'next/link';
+
+export const dynamic = 'force-dynamic'
 
 async function CoHoiKinhDoanh({ searchParams }: { searchParams: any }) {
+  
   const search = async (formData: FormData) => {
     'use server'
     const searchValue = formData.get('job_name') as string
     redirect(`/co-hoi-kinh-doanh?job_name=${encodeURIComponent(searchValue)}`)
   }
+
   const { data } = await getJobs({ page: 1, pageSize: 10, ...searchParams }) as { data: JobEntity[] }
   return (
     <main>
@@ -100,33 +105,43 @@ async function CoHoiKinhDoanh({ searchParams }: { searchParams: any }) {
             </form>
             <div className="flex flex-col lg:flex-row">
               <div className="w-1/5 py-4">
-                Sidebar
+                <div>
+                  job title
+                </div>
+                <div>
+                  location
+                </div>
               </div>
               <div className="w-4/5">
-                {data.map((job: JobEntity) => (
-                  <div
-                    key={job.id.toString()}
-                    className="flex justify-between w-full border-dotted border-b border-[#ccc] py-4"
-                  >
-                    <div>
-                      <div className="mb-2">
-                        <p className="text-xl font-semibold">{job.job_name}</p>
-                      </div>
-                      <div className="flex items-center gap-1 mb-2">
-                        <span><LocationIcon width={12} height={12} /></span>
-                        <p>{job.location}</p>
-                      </div>
-                      <div className="flex items-center gap-1 mb-2">
-                        <span><ClockIcon width={12} height={12} /></span>
-                        <p>{job.time_open} - {job.time_close}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <button className="bg-[#589f46] px-4 py-2 rounded-md text-white hover:opacity-85 duration-300">Apply now</button>
-                    </div>
+                {data.length === 0 ? (
+                  <div className="flex items-center py-4">
+                    <p className="">Không có job phù hợp</p>
                   </div>
-                ))}
-
+                ) : (
+                  data.map((job: JobEntity) => (
+                    <div
+                      key={job.id.toString()}
+                      className="flex justify-between w-full border-dotted border-b border-[#ccc] py-4"
+                    >
+                      <div>
+                        <div className="mb-2">
+                          <p className="text-xl font-semibold">{job.job_name}</p>
+                        </div>
+                        <div className="flex items-center gap-1 mb-2">
+                          <span><LocationIcon width={12} height={12} /></span>
+                          <p>{job.location}</p>
+                        </div>
+                        <div className="flex items-center gap-1 mb-2">
+                          <span><ClockIcon width={12} height={12} /></span>
+                          <p>{job.time_open} - {job.time_close}</p>
+                        </div>
+                      </div>
+                      <div>
+                        <Link href={`/job/${job.slug}`} className="bg-[#589f46] px-4 py-2 rounded-md text-white hover:opacity-85 duration-300">Apply now</Link>
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           </div>

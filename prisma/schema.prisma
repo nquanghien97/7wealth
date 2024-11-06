@@ -83,6 +83,7 @@ model Job {
   salary                String
   job_description       String   @db.LongText
   number_of_recruitment Int
+  slug                  String   @unique
   created_at            DateTime @default(now())
 }
 
@@ -94,12 +95,11 @@ model Candidate_information {
   phone_number        String
   date_of_birth       String
   content             String
-  image               String
   education           String
   current_address     String
-  years_of_experience Int
+  years_of_experience String
   salary_expect       String
   availability_time   String
-  resume              String
+  file                String
   created_at          DateTime @default(now())
 }

@@ -7,11 +7,7 @@ export async function uploadFile(files: File[], folderPath: string, typeFile: 'i
     const buffer = Buffer.from(await file.arrayBuffer());
     const filename = Date.now() + file.name.replaceAll(" ", "_");
 
-    const targetPath = path.join(process.cwd(), typeFile, folderPath);
-    
-    // Tạo thư mục nếu chưa tồn tại
-    await mkdir(targetPath, { recursive: true });
-
+    const targetPath = path.join(process.cwd(), `files/${typeFile}`);
     await writeFile(
       path.join(targetPath, filename),
       buffer

@@ -16,5 +16,6 @@ export interface JobEntity {
   salary: String
   job_description: String
   number_of_recruitment: Number
+  slug : String
   created_at: Date
 }

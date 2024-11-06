@@ -1,8 +1,10 @@
+import { createSlug } from "@/utils/createSlug";
 import prisma from "../../../lib/db";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const { job_name, location, time_open, time_close, job_type, salary, job_description, number_of_recruitment } = await req.json();
+  const slug = createSlug(job_name)
   try {
     await prisma.job.create({
       data: {
@@ -13,7 +15,8 @@ export async function POST(req: Request) {
         job_type,
         salary,
         job_description,
-        number_of_recruitment
+        number_of_recruitment,
+        slug
       }
     })
     return NextResponse.json({ message: 'Tạo Job thành công' }, { status: 200 })
