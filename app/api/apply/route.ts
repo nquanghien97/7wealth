@@ -56,11 +56,17 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const page = parseInt(url.searchParams.get('page') ?? '1', 10);
   const pageSize = parseInt(url.searchParams.get('pageSize') ?? '10', 10);
+  const full_name = url.searchParams.get('full_name');
+  const phone_number = url.searchParams.get('phone_number');
 
   const skip = (page - 1) * pageSize;
   const take = pageSize;
   try {
     const data = await prisma.candidate_information.findMany({
+      where: {
+        ...(full_name && { full_name: { contains: full_name } }),
+        ...(phone_number && { phone_number: { contains: phone_number } }),
+      },
       skip,
       take,
       orderBy: {

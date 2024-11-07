@@ -1,11 +1,11 @@
 import { JobEntity } from "@/entities/job.entity";
 
-export async function getJobs({ page, pageSize, job_name, location }: { page?: number, pageSize?: number, job_name?: string, location?: string }) {
+export async function getJobs({ page, pageSize, phone_number, full_name }: { page?: number, pageSize?: number, phone_number?: string, full_name?: string }) {
   const params = new URLSearchParams();
   if (page) params.append('page', page.toString());
   if (pageSize) params.append('pageSize', pageSize.toString());
-  if (job_name) params.append('job_name', job_name.toString());
-  if (location) params.append('location', location.toString());
+  if (phone_number) params.append('phone_number', phone_number.toString());
+  if (full_name) params.append('full_name', full_name.toString());
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/job?${params.toString()}`)
   return res.json()
 }

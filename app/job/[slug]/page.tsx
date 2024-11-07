@@ -13,16 +13,16 @@ async function Slug({ params, searchParams }: { params: any, searchParams: any }
       <div className="max-w-[1100px] m-auto">
         <div className="flex justify-between border-dotted border-b border-[#ccc] py-8">
           <div className="w-3/4">
-            <h2 className="text-3xl text-[#589f46] mb-2">{data.job_name}</h2>
+            <h2 className="text-3xl text-[#589f46] mb-4">{data.job_name}</h2>
             <ul>
-              <li>
-                <span className="font-bold">Salary:</span> {data.salary}
+              <li className="mb-2">
+                <span className="font-bold">Mức lương:</span> {data.salary}
               </li>
-              <li>
-                <span className="font-bold">Location:</span> {data.location}
+              <li className="mb-2">
+                <span className="font-bold">Địa điểm:</span> {data.location}
               </li>
-              <li>
-                <span className="font-bold">Deadline:</span> {data.time_open} - {data.time_close}
+              <li className="mb-2">
+                <span className="font-bold">Hạn nộp hồ sơ:</span> từ {data.time_open} <span>đến</span> {data.time_close}
               </li>
               <li></li>
             </ul>
