@@ -4,9 +4,10 @@ import Link from 'next/link'
 import React from 'react'
 import ApplicationForm from './ApplicationForm'
 
+export const dynamic = 'force-dynamic'
 async function Slug({ params, searchParams }: { params: any, searchParams: any }) {
   const { data } = await getJobsBySlug(params.slug) as unknown as { data: JobEntity }
-  
+
   return (
     <main className="mb-8 scroll-smooth">
       <div className="max-w-[1100px] m-auto">
@@ -31,8 +32,8 @@ async function Slug({ params, searchParams }: { params: any, searchParams: any }
           </div>
         </div>
         <div className="py-8">
-          <h2 className="text-3xl text-[#589f46] mb-2">Job Description</h2>
-          <div dangerouslySetInnerHTML={{ __html: data.job_description }} />
+          <h2 className="text-3xl text-[#589f46] mb-5">Job Description</h2>
+          <div className="description" dangerouslySetInnerHTML={{ __html: data.job_description }} />
         </div>
         <ApplicationForm job_id={data.id} />
       </div>

@@ -36,7 +36,7 @@ export async function POST(req: Request) {
         salary_expect,
         years_of_experience,
         job_id,
-        file: `/file/${filenames[0]}`
+        file: `/files/pdfFile/${filenames[0]}`
       }
     })
     return NextResponse.json({ data }, { status: 200 })
@@ -60,14 +60,17 @@ export async function GET(req: Request) {
   const skip = (page - 1) * pageSize;
   const take = pageSize;
   try {
-    const news = await prisma.news.findMany({
+    const data = await prisma.candidate_information.findMany({
       skip,
-      take
+      take,
+      orderBy: {
+        created_at: 'desc'
+      }
     })
-    const total = await prisma.news.count()
+    const total = await prisma.candidate_information.count()
     return NextResponse.json(
       {
-        data: news,
+        data,
         paging: {
           page,
           pageSize,

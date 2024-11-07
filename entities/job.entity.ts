@@ -8,14 +8,14 @@ export enum Job_type {
 
 export interface JobEntity {
   id: number
-  job_name: String
-  location: String
-  time_open: String
-  time_close: String
+  job_name: string
+  location: string
+  time_open: string
+  time_close: string
   job_type: Job_type
-  salary: String
-  job_description: String
+  salary: string
+  job_description: string
   number_of_recruitment: number
-  slug : String
+  slug : string
   created_at: Date
 }

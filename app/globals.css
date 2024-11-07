@@ -325,6 +325,7 @@ html {
   stroke: #000;
   stroke-miterlimit: 10;
 }
+
 .test1 {
   fill: #4F4F4F;
   stroke: #000;
@@ -443,4 +444,33 @@ circle {
 
 .swiper-pagination-bullet-active {
   background: #555 !important
+}
+
+.description {
+  font-size: 14px;
+}
+
+.description p {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.description li {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #00305b;
+}
+
+.description li::before {
+  content: "";
+  display: inline-block;
+  color: #999;
+  font-family: "ap";
+  margin-left: 20px;
+  margin-right: 5px;
+  background-image: url('/check.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
 }
