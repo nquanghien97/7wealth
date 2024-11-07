@@ -2,10 +2,12 @@
 
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import Link from 'next/link';
 import CartIcon from '@/assets/icons/CartIcon';
+import StarIcon from '@/assets/icons/StarIcon';
+import { useRouter } from 'next/navigation';
 
 interface SliderProps {
   id: number;
@@ -17,6 +19,7 @@ interface SliderProps {
 }
 
 function Slider(props: { data: SliderProps[] }) {
+  const router = useRouter()
   const { data } = props;
   return (
     <div>
@@ -48,23 +51,29 @@ function Slider(props: { data: SliderProps[] }) {
         {data.map(product => (
           <SwiperSlide
             key={product.id}
-            className='w-full pb-6 cursor-pointer group'
+            className='w-full pb-6 cursor-pointer'
           >
-            <Link href={`/san-pham/${product.path}`}>
-              <div className="overflow-hidden">
-                <Image src={`${product.image}`} alt={product.name} width={1024} height={716} className='w-full md:w-[360px] group-hover:scale-110 duration-500 bg-[#ededed] rounded-2xl' />
+            <div onClick={() => router.push(`/san-pham/${product.path}`)}>
+              <div className="overflow-hidden mb-4">
+                <Image src={`${product.image}`} alt={product.name} width={1024} height={716} className='w-full md:w-[360px] hover:scale-110 duration-500 rounded-2xl' />
               </div>
-              <div className='py-2'>
-                <p className='text-base font-bold text-[#5f5d5d]'>{product.name}</p>
-                <p className="text-[#235932]">{product.description}</p>
-                <div className="flex items-center justify-between">
+              <div className='py-2 text-center mb-4'>
+                <div className="flex justify-center mb-2">
+                  <StarIcon width={16} height={16} />
+                  <StarIcon width={16} height={16} />
+                  <StarIcon width={16} height={16} />
+                  <StarIcon width={16} height={16} fill="#ccc" />
+                  <StarIcon width={16} height={16} fill="#ccc" />
+                </div>
+                <p className='text-sm uppercase text-[#555]'>{product.name}</p>
+                <p className="text-[black] mb-4 text-xl">{product.description}</p>
+                <div className="flex items-center justify-between border border-[#555] rounded-full px-8 py-2 hover:bg-[#555] hover:text-white duration-500 group">
                   <p className="font-semibold">330.000 VNĐ</p>
-                  <div className="p-2 bg-[#235932] rounded-md cursor-pointer">
-                    <CartIcon width={24} height={24} fill="white" />
-                  </div>
+                  <div className="w-[2px] h-4 bg-[#555] group-hover:bg-[white] duration-500" />
+                  <Link href="/">Shop now</Link>
                 </div>
               </div>
-            </Link>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

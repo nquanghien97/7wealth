@@ -426,3 +426,21 @@ circle {
 .flex_0_0_auto {
   flex: 0 0 auto;
 }
+
+/* swipper */
+.swiper-button-prev {
+  color: #555 !important
+}
+
+.swiper-button-next {
+  color: #555 !important
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  border: 1px solid #555 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #555 !important
+}

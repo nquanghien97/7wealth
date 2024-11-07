@@ -1,5 +1,7 @@
 import BodySection from '@/components/HomePage/BodySection'
 import Image from 'next/image'
+import Slider from './san-pham/Slider'
+import { data } from './san-pham/page'
 
 export default function Home() {
   return (
@@ -8,6 +10,9 @@ export default function Home() {
         <Image src="/banner.png" alt="banner" width={1903} height={728} className="w-full" />
       </section>
       <BodySection />
+      <section className="max-w-screen-xl m-auto px-2 mb-8">
+        <Slider data={data} />
+      </section>
       <section className="mb-16">
         <div className="flex justify-center items-center flex-col mb-4">
           <div className="mb-4">
@@ -19,35 +24,30 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-screen-xl m-auto">
-          <div className="flex justify-center flex-wrap gap-4">
-            <div className="relative">
-              <Image src="/t1.png" alt="t1" width={406} height={679} />
-              <div className="absolute top-4 left-4 px-2 py-1 bg-[#235932] rounded-md">
-                <p className="text-white">Quảng bá sản phẩm</p>
-              </div>
-              <div className="absolute bottom-6 left-4 max-w-[75%]">
-                <p className="text-white mb-2">Quảng bá sản phẩm - Tri thức nhân sinh - Sứ mệnh đam mê</p>
-                <button className="text-white px-2 py-1 border border-white rounded-md">Đọc ngay</button>
-              </div>
+          <div className="flex justify-center items-center flex-wrap max-lg:flex-col">
+            <div className="flex items-center pr-4 lg:w-1/3 max-lg:mb-4">
+              <p className="uppercase text-3xl font-semibold">Bên trong + Bên ngoài = Cân bằng</p>
             </div>
-            <div className="relative">
-              <Image src="/t1.png" alt="t1" width={406} height={679} />
-              <div className="absolute top-4 left-4 px-2 py-1 bg-[#235932] rounded-md">
-                <p className="text-white">Quảng bá sản phẩm</p>
+            <div className="flex lg:w-2/3">
+              <div className="relative pr-4">
+                <Image src="/t1.png" alt="t1" width={406} height={679} />
+                <div className="absolute top-4 left-4 px-2 py-1 bg-[#235932] rounded-md">
+                  <p className="text-white">Quảng bá sản phẩm</p>
+                </div>
+                <div className="absolute bottom-6 left-4 max-w-[75%]">
+                  <p className="text-white mb-2">Quảng bá sản phẩm - Tri thức nhân sinh - Sứ mệnh đam mê</p>
+                  <button className="text-white px-2 py-1 border border-white rounded-md">Đọc ngay</button>
+                </div>
               </div>
-              <div className="absolute bottom-6 left-4 max-w-[75%]">
-                <p className="text-white mb-2">Quảng bá sản phẩm - Tri thức nhân sinh - Sứ mệnh đam mê</p>
-                <button className="text-white px-2 py-1 border border-white rounded-md">Đọc ngay</button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image src="/t1.png" alt="t1" width={406} height={679} />
-              <div className="absolute top-4 left-4 px-2 py-1 bg-[#235932] rounded-md">
-                <p className="text-white">Quảng bá sản phẩm</p>
-              </div>
-              <div className="absolute bottom-6 left-4 max-w-[75%]">
-                <p className="text-white mb-2">Quảng bá sản phẩm - Tri thức nhân sinh - Sứ mệnh đam mê</p>
-                <button className="text-white px-2 py-1 border border-white rounded-md">Đọc ngay</button>
+              <div className="relative">
+                <Image src="/t1.png" alt="t1" width={406} height={679} />
+                <div className="absolute top-4 left-4 px-2 py-1 bg-[#235932] rounded-md">
+                  <p className="text-white">Quảng bá sản phẩm</p>
+                </div>
+                <div className="absolute bottom-6 left-4 max-w-[75%]">
+                  <p className="text-white mb-2">Quảng bá sản phẩm - Tri thức nhân sinh - Sứ mệnh đam mê</p>
+                  <button className="text-white px-2 py-1 border border-white rounded-md">Đọc ngay</button>
+                </div>
               </div>
             </div>
           </div>
@@ -63,24 +63,18 @@ export default function Home() {
           <div className="flex justify-center flex-wrap gap-4">
             <div className="relative">
               <Image src="/tt1.png" alt="t1" width={406} height={679} />
-              <div className="absolute bottom-6 left-4 max-w-[75%]">
-                <p className="text-[#235932] uppercase font-semibold">Triết lý dinh dưỡng toàn cầu</p>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[75%] bg-white p-2 opacity-95">
+                <h3 className="text-[#235932] uppercase font-semibold">Hoạt động xã hội</h3>
+                <p>Hiện thực hóa những mục tiêu phát triển bền vững</p>
                 <div className="w-1/4 h-[3px] bg-[#235932] mb-2" />
                 <button className="">Về 7wealth</button>
               </div>
             </div>
             <div className="relative">
               <Image src="/tt2.png" alt="t1" width={406} height={679} />
-              <div className="absolute bottom-6 left-4 max-w-[75%]">
-                <p className="text-[#235932] uppercase font-semibold">Triết lý dinh dưỡng toàn cầu</p>
-                <div className="w-1/4 h-[3px] bg-[#235932] mb-2" />
-                <button className="">Về 7wealth</button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image src="/tt3.png" alt="t1" width={406} height={679} />
-              <div className="absolute bottom-6 left-4 max-w-[75%]">
-                <p className="text-[#235932] uppercase font-semibold">Triết lý dinh dưỡng toàn cầu</p>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[75%] bg-white p-2 opacity-95">
+                <h3 className="text-[#235932] uppercase font-semibold">Phát triển con người</h3>
+                <p>Là hành trình chúng tôi trưởng thành tạo ra những giá trị bền vững cho khách hàng và doanh nghiệp</p>
                 <div className="w-1/4 h-[3px] bg-[#235932] mb-2" />
                 <button className="">Về 7wealth</button>
               </div>

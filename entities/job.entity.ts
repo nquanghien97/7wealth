@@ -7,7 +7,7 @@ export enum Job_type {
 }
 
 export interface JobEntity {
-  id: Number
+  id: number
   job_name: String
   location: String
   time_open: String
@@ -15,7 +15,7 @@ export interface JobEntity {
   job_type: Job_type
   salary: String
   job_description: String
-  number_of_recruitment: Number
+  number_of_recruitment: number
   slug : String
   created_at: Date
 }

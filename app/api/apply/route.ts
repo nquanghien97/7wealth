@@ -17,8 +17,8 @@ export async function POST(req: Request) {
     const phone_number = formData.get('phone_number') as string;
     const salary_expect = formData.get('salary_expect') as string;
     const years_of_experience = formData.get('years_of_experience') as string;
+    const job_id = +(formData.get('job_id') || 0);
     const files = Array.from(formData.values()).filter((value): value is File => value instanceof File);
-
     if (files.length === 0) {
       return NextResponse.json({ message: "Không file nào được chọn" }, { status: 400 });
     }
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
         phone_number,
         salary_expect,
         years_of_experience,
-        job_id: +1,
+        job_id,
         file: `/file/${filenames[0]}`
       }
     })

@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from './Slider'
 
-const data = [
+export const data = [
   {
     id: 1,
     name: 'Tính chất ngăn ngừa lão hóa',

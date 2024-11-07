@@ -6,8 +6,8 @@ function About() {
     <main>
       <section className="relative mb-16 bg-[url('/banner-about.jpg')] bg-[length:100%_100%]">
         <div className="py-[120px] md:py-[270px]">
-          <h2 className="text-center text-white text-3xl leading-10">
-            GÓP PHẦN ĐƯA VIỆT NAM
+          <h2 className="text-center text-white text-3xl leading-10 font-bold">
+            7WEALTH GÓP PHẦN ĐƯA VIỆT NAM
             <br />
             TRỞ NÊN VĨ ĐẠI HƠN
           </h2>
@@ -17,7 +17,7 @@ function About() {
         <div className="max-w-screen-xl m-auto">
           <div className="w-3/5 m-auto mb-16">
             <p className="text-[#235932]">
-              Chúng tôi ra đời với sứ mệnh cao cả là trao đi giá trị giải pháp sức khỏe - sắc đẹp toàn diện cho con người để nâng tầm chất lượng cuộc sống nhân loại.
+              Thương hiệu 7WEALTH ra đời với sứ mệnh cao cả là trao đi giá trị giải pháp sức khỏe - sắc đẹp toàn diện cho con người để nâng tầm chất lượng cuộc sống nhân loại.
               <br />
               Chúng tôi bắt đầu 7WEALTH từ một suy nghĩ nhiều năm trước đây về việc nâng cấp chất lượng cuộc sống bằng sự kết hợp giữa công nghệ tiên tiến của thế giới và sự tiếp nối những giá trị, triết lý sống của người Việt Nam xưa.
             </p>
