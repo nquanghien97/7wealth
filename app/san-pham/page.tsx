@@ -2,6 +2,8 @@ import React from 'react'
 import Slider from './Slider'
 import { getProducts } from '@/services/products'
 
+export const dynamic = 'force-dynamic'
+
 async function Product() {
 
   const { data: dataVitamin } = await getProducts({ page: 1, pageSize: 10, type: 'VitaminKhoangChat' });

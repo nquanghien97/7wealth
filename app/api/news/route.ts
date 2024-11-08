@@ -20,14 +20,14 @@ export async function POST(req: Request) {
     if (files.length === 0) {
       return NextResponse.json({ message: "Không file nào được chọn" }, { status: 400 });
     }
-    filenames = await uploadFile(files, "news", 'images');
+    filenames = await uploadFile(files, 'images/news');
     const newNews = await prisma.news.create({
       data: {
         title,
         content,
         slug,
         authorId: +1,
-        imageUrl: `/images/news/${filenames[0]}`
+        imageUrl: `/files/images/news/${filenames[0]}`
       }
     })
     return NextResponse.json({ newNews }, { status: 200 })

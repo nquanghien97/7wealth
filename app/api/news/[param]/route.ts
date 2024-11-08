@@ -46,14 +46,14 @@ export async function PUT(req: Request, { params }: { params: { param: number } 
     }
     await deleteFile(oldNews?.imageUrl || '');
 
-    filenames = await uploadFile(files, "news", 'images');
+    filenames = await uploadFile(files, 'images');
     const updatednews = await prisma.$transaction(async (tx) => {
       const news = await tx.news.update({
         where: { id: +param },
         data: {
           title,
           content,
-          imageUrl: `/images/news/${filenames[0]}`,
+          imageUrl: `/files/images/news/${filenames[0]}`,
           slug
         },
       });

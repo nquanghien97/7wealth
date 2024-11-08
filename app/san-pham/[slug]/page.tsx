@@ -3,6 +3,8 @@ import { ProductEntity } from "@/entities/products.entity"
 import { getProductsBySlug } from "@/services/products"
 import { formatCurrency } from "@/utils/formatCurrency"
 
+export const dynamic = 'force-dynamic'
+
 async function DetailProduct({ params } : { params : { slug : string } } ) {
   const { data } = await getProductsBySlug(params.slug) as unknown as { data : ProductEntity}
   if(!data) return <div className='text-center py-4'>Không có sản phẩm phù hợp</div>
