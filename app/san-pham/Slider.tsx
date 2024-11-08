@@ -75,7 +75,7 @@ function Slider(props: { data: SliderProps[] }) {
                     <StarIcon width={16} height={16} fill="#ccc" />
                   </div>
                   <p className='text-sm uppercase text-[#555]'>{product.name}</p>
-                  <div className="text-[black] mb-4 text-xl" dangerouslySetInnerHTML={{ __html: product.details }} />
+                  <div className="text-[black] mb-4 text-sm line-clamp-2 px-4" dangerouslySetInnerHTML={{ __html: product.details }} />
                   <div className="flex items-center justify-between border border-[#555] rounded-full px-8 py-2 hover:bg-[#555] hover:text-white duration-500 group">
                     <p className="font-semibold px-4">{formatCurrency(product.price)} VNĐ</p>
                     <div className="w-[2px] h-4 bg-[#555] group-hover:bg-[white] duration-500" />
