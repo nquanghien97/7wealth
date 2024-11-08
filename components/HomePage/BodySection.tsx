@@ -8,7 +8,7 @@ function BodySection() {
   
   const [gender, setGender] = useState<'nữ' | 'nam'>('nữ')
   return (
-    <section className="mb-8">
+    <section className="mb-16">
       <div className="max-w-screen-xl m-auto">
         <div className="flex justify-center items-center flex-col mb-4">
           <div className="mb-4">

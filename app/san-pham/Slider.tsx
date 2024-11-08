@@ -26,6 +26,9 @@ interface SliderProps {
 function Slider(props: { data: SliderProps[] }) {
   const router = useRouter()
   const { data } = props;
+  if(!data) return (
+    <p className="text-center py-16">Không có sản phẩm !</p>
+  )
   return (
     <div>
       <Swiper

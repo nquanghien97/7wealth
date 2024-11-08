@@ -1,9 +1,12 @@
 import BodySection from '@/components/HomePage/BodySection'
 import Image from 'next/image'
 import Slider from './san-pham/Slider'
-import { data } from './san-pham/page'
+import { getProducts } from '@/services/products';
 
-export default function Home() {
+export default async function Home() {
+
+  const { data } = await getProducts({ page: 1, pageSize: 10, type: 'VitaminKhoangChat' });
+
   return (
     <main className="">
       <section className="relative mb-8">
@@ -11,6 +14,9 @@ export default function Home() {
       </section>
       <BodySection />
       <section className="max-w-screen-xl m-auto px-2 mb-8">
+        <div className="mb-4">
+          <h1 className="text-[#235932] text-3xl font-bold uppercase text-center">Sản phẩm bán chạy</h1>
+        </div>
         <Slider data={data} />
       </section>
       <section className="mb-16">

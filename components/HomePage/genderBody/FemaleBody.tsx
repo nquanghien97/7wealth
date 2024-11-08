@@ -275,7 +275,7 @@ function FemaleBody() {
           >
             <NoiMacTuCung width={72} height={96} className="w-full h-full" />
           </div>
-          <div className={`top-[80%] left-[52%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] $ hidden lg:block {bodyPart === 'nội mạc tử cung' ? 'lg:opacity-100' : 'opacity-0'}`}>Nội mạc tử cung</div>
+          <div className={`top-[80%] left-[52%] w-[200px] z-30 text-end duration-300 absolute border-b border-[#707070] before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:h-[10px] before:w-[10px] before:bg-[#707070] before:rounded-[5px] $ hidden lg:block ${bodyPart === 'nội mạc tử cung' ? 'lg:opacity-100' : 'opacity-0'}`}>Nội mạc tử cung</div>
           <div className="absolute w-[3%] top-[27%] left-[calc(48%+5px)] z-1 hover:scale-110 duration-300 cursor-pointer">
             <Image1 width={30} height={94} className="w-full h-full" />
           </div>
