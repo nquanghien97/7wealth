@@ -6,7 +6,7 @@ interface AuthJwt extends JWTPayload {
 }
 
 const publicRoutes = ['/api/auth/login', '/api/auth/register'];
-const excludedRoutes = ['/api/height-calculator', '/api/images', '/api/apply', '/api/files'];
+const excludedRoutes = ['/api/height-calculator', '/api/images', '/api/apply', '/api/files', '/api/products'];
 
 export async function middleware(req: NextRequest) {
   if (req.method === 'OPTIONS') {

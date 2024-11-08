@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     if (files.length === 0) {
       return NextResponse.json({ message: "Không file nào được chọn" }, { status: 400 });
     }
-    filenames = await uploadFile(files, "files/pdfFiles", "pdfFiles");
+    filenames = await uploadFile(files, "pdfFiles");
     const data = await prisma.candidate_information.create({
       data: {
         availability_time,
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
         salary_expect,
         years_of_experience,
         job_id,
-        file: `/files/pdfFile/${filenames[0]}`
+        file: `/files/pdfFiles/${filenames[0]}`
       }
     })
     return NextResponse.json({ data }, { status: 200 })

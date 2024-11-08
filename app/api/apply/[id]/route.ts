@@ -6,7 +6,7 @@ import { deleteFile, uploadFile } from "@/utils/fileUpload";
 // export async function GET(req: Request, { params }: { params: { id: number } }) {
 //   const { id } = params
 //   try {
-//     const order = await prisma.order.findUnique({
+//     const candidate_information = await prisma.candidate_information.findUnique({
 //       where: {
 //         id
 //       }
@@ -14,7 +14,7 @@ import { deleteFile, uploadFile } from "@/utils/fileUpload";
 //     return NextResponse.json(
 //       {
 //         message: 'Lấy thông tin CV thành công',
-//         order
+//         candidate_information
 //       },
 //       { status: 200 }
 //     );
@@ -30,14 +30,20 @@ import { deleteFile, uploadFile } from "@/utils/fileUpload";
 export async function DELETE(req: Request, { params }: { params: { id: number } }) {
   const { id } = params
   try {
-    const order = await prisma.candidate_information.findUnique({
+    const candidate_information = await prisma.candidate_information.findUnique({
       where: {
         id: +id,
       }
     })
-    if (!order) {
+    if (!candidate_information) {
       return NextResponse.json({ message: 'CV không tồn tại' }, { status: 404 });
+      // D:\work\7wealth\7wealth\files\pdfFiles\17310342484821730945349262Nguyen_Quang_Hien___resume.pdf
     }
+    // Delete file if exists
+    if(candidate_information.file) {
+      await deleteFile(candidate_information.file)
+    }
+
     await prisma.candidate_information.delete({
       where: {
         id: +id

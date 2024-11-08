@@ -8,14 +8,19 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import CartIcon from '@/assets/icons/CartIcon';
 import StarIcon from '@/assets/icons/StarIcon';
 import { useRouter } from 'next/navigation';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 interface SliderProps {
   id: number;
   name: string;
-  image: string;
+  images: {
+    id: number;
+    imageUrl: string;
+  }[];
   description: string;
+  details: string;
   price: string;
-  path: string;
+  slug: string;
 }
 
 function Slider(props: { data: SliderProps[] }) {
@@ -41,7 +46,7 @@ function Slider(props: { data: SliderProps[] }) {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: data.length,
             spaceBetween: 40,
           },
         }}
@@ -53,24 +58,26 @@ function Slider(props: { data: SliderProps[] }) {
             key={product.id}
             className='w-full pb-6 cursor-pointer'
           >
-            <div onClick={() => router.push(`/san-pham/${product.path}`)}>
-              <div className="overflow-hidden mb-4">
-                <Image src={`${product.image}`} alt={product.name} width={1024} height={716} className='w-full md:w-[360px] hover:scale-110 duration-500 rounded-2xl' />
+            <div onClick={() => router.push(`/san-pham/${product.slug}`)} className="flex flex-col">
+              <div className="overflow-visible mb-4 py-8 m-auto flex-1">
+                <Image src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${product.images[0].imageUrl}`} alt={product.name} width={1024} height={716} className='w-full h-[400px] object-cover hover:scale-110 duration-500 rounded-2xl' />
               </div>
-              <div className='py-2 text-center mb-4'>
-                <div className="flex justify-center mb-2">
-                  <StarIcon width={16} height={16} />
-                  <StarIcon width={16} height={16} />
-                  <StarIcon width={16} height={16} />
-                  <StarIcon width={16} height={16} fill="#ccc" />
-                  <StarIcon width={16} height={16} fill="#ccc" />
-                </div>
-                <p className='text-sm uppercase text-[#555]'>{product.name}</p>
-                <p className="text-[black] mb-4 text-xl">{product.description}</p>
-                <div className="flex items-center justify-between border border-[#555] rounded-full px-8 py-2 hover:bg-[#555] hover:text-white duration-500 group">
-                  <p className="font-semibold">330.000 VNĐ</p>
-                  <div className="w-[2px] h-4 bg-[#555] group-hover:bg-[white] duration-500" />
-                  <Link href="/">Shop now</Link>
+              <div className="flex justify-center">
+                <div className='py-2 text-center mb-4'>
+                  <div className="flex justify-center mb-2">
+                    <StarIcon width={16} height={16} />
+                    <StarIcon width={16} height={16} />
+                    <StarIcon width={16} height={16} />
+                    <StarIcon width={16} height={16} fill="#ccc" />
+                    <StarIcon width={16} height={16} fill="#ccc" />
+                  </div>
+                  <p className='text-sm uppercase text-[#555]'>{product.name}</p>
+                  <div className="text-[black] mb-4 text-xl" dangerouslySetInnerHTML={{ __html: product.details }} />
+                  <div className="flex items-center justify-between border border-[#555] rounded-full px-8 py-2 hover:bg-[#555] hover:text-white duration-500 group">
+                    <p className="font-semibold px-4">{formatCurrency(product.price)} VNĐ</p>
+                    <div className="w-[2px] h-4 bg-[#555] group-hover:bg-[white] duration-500" />
+                    <Link href={`/san-pham/${product.slug}`} className="px-4">Shop now</Link>
+                  </div>
                 </div>
               </div>
             </div>
