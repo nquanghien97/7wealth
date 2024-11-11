@@ -19,6 +19,7 @@ import { ListBodyData, ListBodyIcon } from '@/config/ListBodyData';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { isMobile } from 'react-device-detect';
 
 type bodyPart = 'não' | 'bạch cầu' | 'đầu và cổ' | 'đường ruột' | 'ngực' | 'tuyến tụy' | 'tuyến giáp' | 'thực quản' | 'phổi' | 'gan' | 'hắc tố da' | 'thận' | 'tế bào lympho' | 'buồng trứng' | 'nội mạc tử cung'
 function FemaleBody() {
@@ -34,8 +35,16 @@ function FemaleBody() {
               <li
                 key={bodyPart.title}
                 className="w-[50px] h-[50px] hover:scale-110 duration-300 cursor-pointer"
-                onMouseEnter={() => setBodyPart(bodyPart.title)}
-                onMouseLeave={() => setBodyPart(null)}
+                onMouseEnter={() => {
+                  if(!isMobile) {
+                    setBodyPart(bodyPart.title)
+                  }
+                }}
+                onMouseLeave={() => {
+                  if(!isMobile) {
+                    setBodyPart(null)
+                  }
+                }}
                 onClick={() => {
                   setOpenModal(true)
                   setBodyPartClick(bodyPart.title)
